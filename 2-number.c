@@ -16,8 +16,9 @@ int print_from_to(char *start, char *stop, char *except)
 	{
 		if (start != except)
 			sum += _putchar(*start);
+		start++;
 	}
-	return sum;
+	return (sum);
 }
 
 /**
@@ -43,6 +44,7 @@ int print_rev(va_list ap, params_t *params)
 	}
 	return (sum);
 }
+
 /**
  * print_rot13 - prints string in rot13
  * @ap: string
@@ -50,11 +52,11 @@ int print_rev(va_list ap, params_t *params)
  *
  * Return: number bytes printed
  */
-int print_rot13(va_loist ap, params_t *params)
+int print_rot13(va_list ap, params_t *params)
 {
 	int i, index;
 	int count = 0;
-	char arr[] = 
+	char arr[] =
 		"NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
 	char *a = va_arg(ap, char *);
 	(void)params;
@@ -64,7 +66,7 @@ int print_rot13(va_loist ap, params_t *params)
 	while (a[i])
 	{
 		if ((a[i] >= 'A' && a[i] <= 'Z')
-				|| (a[i] >= 'a' && a[i] <= 'z'))
+		    || (a[i] >= 'a' && a[i] <= 'z'))
 		{
 			index = a[i] - 65;
 			count += _putchar(arr[index]);
