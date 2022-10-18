@@ -93,7 +93,7 @@ int get_flag(char *s, params_t *params)
 /**
  * get_modifier - finds the modifier function
  * @s: string for format
- * @params: parameter structure * Return: if modifier was valid
+ * @params: parameter structure
  * Return: if modifier was valid
  */
 
